@@ -71,8 +71,8 @@ export default function ChatPage() {
   try {
     const apiKey = process.env.API_KEY as String ; // Use API key from env
     const url = activate
-      ? "http://52.140.1.5:5678/api/v1/workflows/rguevFxVSG6QEKSr/activate"
-      : "http://52.140.1.5:5678/api/v1/workflows/rguevFxVSG6QEKSr/deactivate";
+      ? "http://52.140.1.5/api/v1/workflows/rguevFxVSG6QEKSr/activate"
+      : "http://52.140.1.5/api/v1/workflows/rguevFxVSG6QEKSr/deactivate";
     console.log("✅ Response status:",apiKey);
     const headers = {
       "Content-Type": "application/json",
