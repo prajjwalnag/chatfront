@@ -280,6 +280,21 @@ const toggleWorkflowLeadClosure = async (activate: boolean) => {
     if (e.key === "Enter" && !mailDraftLoading) sendMailDraftMessage();
   };
 
+  // Show welcome message when Lead Gen tab is loaded
+  useEffect(() => {
+    if (activeTab === 0 && messages.length === 0) {
+      setMessages([
+        { role: "bot", content: "Hey, I am your lead generation agent and will help you to generate leads.\nCan you tell me where are you looking leads from?" }
+      ]);
+    }
+    if (activeTab === 1 && mailDraftMessages.length === 0) {
+      setMailDraftMessages([
+        { role: "bot", content: "Hey, I am your mail draft agent. How can I help you draft your email today?" }
+      ]);
+    }
+    // eslint-disable-next-line
+  }, [activeTab]);
+
   return (
     <div className="flex flex-row h-screen w-screen bg-background text-foreground overflow-hidden">
       {/* Sidebar with toggle buttons */}
