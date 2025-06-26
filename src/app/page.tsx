@@ -380,12 +380,7 @@ const toggleWorkflowLeadClosure = async (activate: boolean) => {
         {/* Main chat area, only show for Lead Gen Agent tab */}
         {activeTab === 0 && (
           <>
-            <div className="flex items-center justify-between px-4 py-3 border-b border-border">
-              <div className="flex items-center gap-2">
-                <FaRobot className="text-xl" />
-                <span className="text-lg font-medium">Lead Gen Agent</span>
-              </div>
-            </div>
+            
             <Card className="flex-1 rounded-none border-none h-full w-full overflow-hidden">
               <CardContent className="flex-1 h-full w-full overflow-y-auto p-8 space-y-4">
                 {messages.length === 0 ? (
@@ -448,12 +443,7 @@ const toggleWorkflowLeadClosure = async (activate: boolean) => {
         {/* Placeholder for second tab content */}
         {activeTab === 1 && (
           <>
-            <div className="flex items-center justify-between px-4 py-3 border-b border-border">
-              <div className="flex items-center gap-2">
-                <FaRobot className="text-xl" />
-                <span className="text-lg font-medium">Mail Drafter</span>
-              </div>
-            </div>
+          
             <Card className="flex-1 rounded-none border-none h-full w-full overflow-hidden">
               <CardContent className="flex-1 h-full w-full overflow-y-auto p-8 space-y-4">
                 {mailDraftMessages.length === 0 ? (
